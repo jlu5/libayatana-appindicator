@@ -1619,7 +1619,7 @@ status_icon_changes (AppIndicator * self, gpointer data)
 		gint n_elements, i;
 		gboolean found=FALSE;
 		gtk_icon_theme_get_search_path(icon_theme, &path, &n_elements);
-		for (i=0; i< n_elements || path[i] == NULL; i++) {
+		for (i=0; i< n_elements; i++) {
 			if(g_strcmp0(path[i], theme_path) == 0) {
 				found=TRUE;
 				break;
